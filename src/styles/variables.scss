@@ -1,0 +1,18 @@
+// sidebar
+$menuTextColor: #fff;
+$sideBarWidth: 210px;
+$sideCollapseWidth: 64px;
+$sliderBarBgColor: #37404f;
+$subMenuActive: #577abc;
+$menuHoverBgColor: #212938;
+
+$headerHeight: 60px;
+$linkColor: #4a90e2;
+
+:export {
+  sliderBarBgColor: $sliderBarBgColor;
+  menuTextColor: $menuTextColor;
+  sideBarWidth: $sideBarWidth;
+  sideCollapseWidth: $sideCollapseWidth;
+  headerHeight: $headerHeight;
+}

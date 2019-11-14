@@ -1,0 +1,38 @@
+@import '@/styles/variables.scss';
+.el-scrollbar {
+  .el-menu {
+    border-right: none;
+    .el-submenu {
+      .el-menu-item {
+        padding-right: 10px;
+        text-overflow: ellipsis;
+        word-spacing: normal;
+        overflow: hidden;
+      }
+    }
+    .el-menu-item,
+    .el-menu-item.is-opened {
+      background-color: $sliderBarBgColor !important;
+    }
+    .el-menu-item.is-active,
+    .el-menu-item.is-active:hover {
+      background-color: $subMenuActive !important;
+    }
+    .el-menu-item:hover {
+      background-color: $menuHoverBgColor !important;
+    }
+    .el-submenu__title {
+      background-color: $sliderBarBgColor !important;
+    }
+    .el-submenu__title:hover {
+      background-color: $menuHoverBgColor !important;
+    }
+  }
+
+  .el-scrollbar__bar.is-vertical {
+    right: 0;
+    .el-scrollbar__thumb {
+      background-color: $subMenuActive;
+    }
+  }
+}
