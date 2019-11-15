@@ -4,32 +4,17 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 import OnlineRecharge from './modules/online-recharge'
+import Dashboard from './modules/dashboard'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    redirect: '/online-recharge',
+    redirect: '/dashboard',
     hidden: true
   },
-  {
-    path: '/index',
-    // redirect: '/index/dashboard',
-    meta: { icon: 'icon-chongzhi', name: 'Dashboard' },
-    component: () =>
-      import(/* webpackChunkName: "layout" */ '@/layouts/BasicLayout.vue'),
-    children: [
-      {
-        path: '/index',
-        name: 'dashboard',
-        meta: { name: 'Dashboard' },
-        component: () =>
-          import(/* webpackChunkName: "online-recharge" */ '@/views/dashboard')
-      }
-    ]
-  },
-
+  { ...Dashboard },
   /* ==== 线上充值管理 ==== */
   { ...OnlineRecharge }
 
