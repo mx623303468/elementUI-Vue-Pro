@@ -9,8 +9,8 @@ export default new Vuex.Store({
     sliderBar_isCollapse: false
   },
   mutations: {
-    [types.SET_SLIDER_BAR_STATUS](state) {
-      state.sliderBar_isCollapse = !state.sliderBar_isCollapse
+    [types.SET_SLIDER_BAR_STATUS](state, { isCollapse }) {
+      state.sliderBar_isCollapse = isCollapse
     }
   },
   actions: {},

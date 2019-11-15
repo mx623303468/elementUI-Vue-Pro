@@ -9,10 +9,21 @@ $menuHoverBgColor: #212938;
 $headerHeight: 60px;
 $linkColor: #4a90e2;
 
+$breakpoints_xs: 768; // <768px
+$breakpoints_sm: 768; // >=768px
+$breakpoints_md: 992; // >=992px
+$breakpoints_lg: 1200; // >=1200px
+$breakpoints_xl: 1920; // >=1920px
+
 :export {
   sliderBarBgColor: $sliderBarBgColor;
   menuTextColor: $menuTextColor;
   sideBarWidth: $sideBarWidth;
   sideCollapseWidth: $sideCollapseWidth;
   headerHeight: $headerHeight;
+  breakpoints_xs: $breakpoints_xs;
+  breakpoints_sm: $breakpoints_sm;
+  breakpoints_md: $breakpoints_md;
+  breakpoints_lg: $breakpoints_lg;
+  breakpoints_xl: $breakpoints_xl;
 }

@@ -29,6 +29,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import SliderBar from './SliderBar'
+import ResizeHandler from '@/mixin/ResizeHandler'
 import variables from '@/styles/variables.scss'
 import { mapMutations, mapState } from 'vuex'
 
@@ -38,10 +39,9 @@ export default {
     Footer,
     SliderBar
   },
+  mixins: [ResizeHandler],
   data() {
-    return {
-      // isCollapse: false
-    }
+    return {}
   },
   computed: {
     ...mapState({
@@ -60,7 +60,7 @@ export default {
       setsliderBarStatus: 'SET_SLIDER_BAR_STATUS'
     }),
     handleCollapse() {
-      this.setsliderBarStatus()
+      this.setsliderBarStatus({ isCollapse: !this.isCollapse })
     }
   }
 }
